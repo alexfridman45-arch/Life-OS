@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10141d"><meta name="description" content="Личный Life Tracker: задачи, финансы, привычки и цели">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="stylesheet" href="styles.css">
+<title>Life OS — личный трекер</title>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div><div class="eyebrow">YOUR PERSONAL LIFE OS</div><h1 id="pageTitle">Мой день</h1></div>
+  <div class="top-actions"><button class="icon-btn" id="backupBtn" title="Резервная копия">⇅</button><button class="avatar" id="todayBtn" title="Сегодня">✦</button></div>
+</header>
+<main id="main"></main>
+<nav class="bottom-nav">
+<button data-tab="home" class="nav-item active"><span>⌂</span>Обзор</button>
+<button data-tab="calendar" class="nav-item"><span>▦</span>Календарь</button>
+<button data-tab="tasks" class="nav-item"><span>✓</span>Задачи</button>
+<button data-tab="finance" class="nav-item"><span>◈</span>Финансы</button>
+<button data-tab="habits" class="nav-item"><span>↗</span>Привычки</button>
+<button data-tab="goals" class="nav-item"><span>◎</span>Цели</button>
+</nav>
+</div>
+<dialog id="editor"><form method="dialog" id="editorForm"><div class="dialog-head"><h2 id="editorTitle">Новая запись</h2><button class="icon-btn" value="cancel">×</button></div><div id="editorFields"></div><div class="dialog-actions"><button class="btn secondary" value="cancel">Отмена</button><button class="btn primary" id="saveEntry" value="default">Сохранить</button></div></form></dialog>
+<dialog id="backupDialog"><form method="dialog"><div class="dialog-head"><h2>Резервная копия</h2><button class="icon-btn" value="cancel">×</button></div><p class="muted">Экспортируйте данные в JSON, чтобы сохранить их или перенести на другое устройство. Импорт заменит текущие данные.</p><div class="backup-actions"><button class="btn primary" id="exportBtn" type="button">Скачать копию</button><label class="btn secondary file-label">Импортировать<input id="importFile" type="file" accept="application/json"></label></div><p class="tiny muted">Совет: делайте резервную копию регулярно. Данные хранятся только в этом браузере.</p></form></dialog>
+<script src="app.js"></script>
+</body></html>

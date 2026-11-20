@@ -1,0 +1,17 @@
+{
+  "name": "Life OS — личный трекер",
+  "short_name": "Life OS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#10141d",
+  "theme_color": "#10141d",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
